@@ -1,0 +1,44 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.nisum'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext{
+	set("springVersion","2.6.3")
+	set("h2Version","2.1.210")
+	set("jwtVersion","3.18.3")
+	set("swaggerVersion","1.6.5")
+}
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-web:${springVersion}"
+	developmentOnly "org.springframework.boot:spring-boot-devtools:${springVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-validation:${springVersion}"
+	implementation "org.springdoc:springdoc-openapi-ui:${swaggerVersion}"
+	implementation "com.h2database:h2:${h2Version}"
+	implementation "com.auth0:java-jwt:${jwtVersion}"
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${springVersion}"
+	testImplementation "com.h2database:h2:${h2Version}"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
