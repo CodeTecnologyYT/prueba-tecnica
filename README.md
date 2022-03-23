@@ -22,7 +22,7 @@ Deberás tener instalado las siguientes.
 ```shell
 ./gradlew bootRun
 ```
-###Ejecutar test
+### Ejecutar test
 Ejecuta todos los archivos test que están en el proyecto.
 ```shell
 ./gradlew test
