@@ -1,16 +1,16 @@
-#Prueba Tecnica
+# Prueba Tecnica
 
 ###Link de prueba Tecnica
 https://drive.google.com/file/d/1K1HjCKpuF5asSlgvKRjqtdKvyc-dSdau/view?usp=sharing
 
-###Tecnologias usadas
+### Tecnologias usadas
 - Spring-Data (JPA)
 - BD h2
 - lombok 
 - Validation
 - Jwt
 
-###Requisito
+### Requisito
 Deberás tener instalado las siguientes.
 - JDK 11
 
